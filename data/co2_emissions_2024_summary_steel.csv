@@ -1,0 +1,62 @@
+source_id,source_name,lat,lon,total_co2_emissions_2024,source,year
+1566841,BMM Ispat Danapur steel plant,15.17029188,76.37772995,2570941.707,climate trace,2025
+1566846,JSW Steel Salem steel plant,11.81370758,77.91861868,1812031.763,climate trace,2025
+1566848,SAIL IISCO steel plant,23.66556822,86.92061118,4064073.996,climate trace,2025
+1566849,SAIL Bhilai steel plant,21.18507191,81.39195484,9899611.729,climate trace,2025
+1566850,SAIL Bokaro steel plant,23.67347053,86.10240256,6632734.065,climate trace,2025
+1566851,SAIL Durgapur steel plant,23.55029744,87.24669796,3171309.765,climate trace,2025
+1566852,SAIL Rourkela steel plant,22.21220782,84.86612431,5993207.636,climate trace,2025
+1566853,Tata Steel Jamshedpur steel plant,22.78828987,86.20013648,16660260.6,climate trace,2025
+1566854,Tata Steel Kalinganagar steel plant,20.96839408,86.01111625,8359482.616,climate trace,2025
+1566855,RINL Vizag Steel plant,17.6106677,83.19148013,10047972.64,climate trace,2025
+1566856,Electrosteel Bokaro steel plant,23.63195007,86.29284195,2988505.47,climate trace,2025
+1566859,Neelachal Ispat Nigam steel plant,20.99933532,86.02248637,1447497.58,climate trace,2025
+1566861,Jindal Stainless Hisar steel plant,29.1270988,75.77283646,381183.5175,climate trace,2025
+1566863,SAIL Alloy Steel Plant,23.52733771,87.26947929,28351.09,climate trace,2025
+1566864,Hospet Steels Hospet plant,15.33875894,76.25189771,984837.6676,climate trace,2025
+1566865,Mesco Steel Kalinganagar plant,20.97964323,86.04312222,2148065.312,climate trace,2025
+1566868,Arjas Steel Tadipatri plant,14.87640074,78.0431633,485856.9257,climate trace,2025
+1567206,NMDC Nagarnar steel plant,19.09773102,82.16613807,5062521.774,climate trace,2025
+1567239,Evonith Value Steel Wardha Steel Plant,20.69617812,78.63898646,395476.8816,climate trace,2025
+1567279,Jindal Stainless Jajpur steel plant,20.9559871,86.05216426,1062170.066,climate trace,2025
+32440769,JSW BPSL Jharsuguda steel plant,21.75920765,84.02083713,8031727.047,climate trace,2025
+32440770,Tata Steel BSL Meramandali steel plant,20.79423963,85.25979794,8269373.128,climate trace,2025
+32440772,ArcelorMittal Nippon Steel Hazira Plant,21.11122226,72.64625163,15629376.59,climate trace,2025
+32440773,JSPL Angul steel plant,20.87693714,84.99088704,9946164.174,climate trace,2025
+32440774,JSPL Raigarh steel plant,21.92775335,83.34725219,6215022.18,climate trace,2025
+32440775,JSW Steel Dolvi steel plant,18.68823504,73.03929615,12629536.4,climate trace,2025
+32440777,JSW Steel Vijayanagar steel plant,15.1792329,76.65900519,15964810.71,climate trace,2025
+32440787,Tata Steel Long Products Gamharia steel plant,22.80989309,86.0872932,1775315.89,climate trace,2025
+32440788,JSW Steel Raigarh steel plant,21.98389971,83.23754764,1526770.342,climate trace,2025
+32440792,Jayaswal Neco Industries Raipur steel plant,21.35430177,81.6716596,2336452.691,climate trace,2025
+32440796,Jai Balaji Durgapur Unit IV steel plant,23.48384082,87.35986311,440377.7133,climate trace,2025
+32440799,Sunflag Iron and Steel plant,21.23296616,79.6315049,807169.3299,climate trace,2025
+42741414,Welspun Metallics Anjar Steel plant,23.11529732,70.08466168,396161.5122,climate trace,2025
+42741420,Rashmi Metaliks Kharagpur steel plant,22.36277883,87.29904009,753336.5504,climate trace,2025
+42741421,Godawari Power and Ispat Siltara steel plant,21.37586838,81.68210776,925738.6464,climate trace,2025
+42741422,Prakash Industries Janjgir steel plant,22.00099978,82.66988764,1881049.896,climate trace,2025
+42741425,Jai Balaji Jyoti Steels Sundargarh plant,22.08467197,84.86145084,145425.7062,climate trace,2025
+42741426,Orissa Sponge Iron and Steel plant,21.80206829,85.56614403,159652.134,climate trace,2025
+42741427,MSP Steel & Power Raigarh plant,21.87785959,83.55498362,608574.9663,climate trace,2025
+42741773,Yazdani Steel and Power Kalinganagar steel plant,20.92565146,86.03991782,173878.5618,climate trace,2025
+42741774,Rungta Mines Dhenkanal steel plant,20.76194258,85.29527038,325627.1248,climate trace,2025
+42741775,Orissa Metaliks Markuta steel plant,21.85722113,83.96720289,165665.9316,climate trace,2025
+42741776,JSW Vijayanagar Metallics steel plant,15.18181671,76.67982874,3972589.457,climate trace,2025
+42741807,Orissa Alloy Steel Kharagpur Plant,22.364258,87.309047,869392.809,climate trace,2025
+42741811,Shri Bajrang Power & Ispat Tilda Steel Plant,21.48569513,81.77092313,790357.0991,climate trace,2025
+42741813,Shyam Steel Raghunathpur Steel Plant,23.590212,86.724603,667395.0288,climate trace,2025
+42741822,Shyam Metalics Jamuria Steel Plant,23.68854806,87.12277804,1623379.179,climate trace,2025
+42741826,Shakambhari Ispat and Power Purulia Steel Plant,23.61426764,86.78964963,839359.2392,climate trace,2025
+42741829,Shyam Metalics Sambalpur Steel Plant,21.67749003,84.04141118,2710924.85,climate trace,2025
+42741834,Orissa Metaliks Kharagpur Steel Plant,22.37713271,87.27944371,1422642.778,climate trace,2025
+42741835,Mono Steel Gandhidham plant,23.31293433,70.20019133,1217149.933,climate trace,2025
+42741836,Shyam Steel Mejia Steel Plant,23.56371354,87.08649145,199169.989,climate trace,2025
+42741838,Nilachal Iron & Power Gamharia Steel Plant,22.87479903,86.06410152,156490.7056,climate trace,2025
+42741848,N R Ispat and Power Raigarh steel plant,22.01241242,83.33068183,75874.28151,climate trace,2025
+42741849,Adhunik Metaliks Kuanrmunda steel plant,22.3097259,84.76662294,805235.8661,climate trace,2025
+42741850,Rungta Mines Chaliyama steel plant,22.58775772,85.90658449,1100177.082,climate trace,2025
+42741857,Crest Steel and Power Mangatta Steel Plant,21.18976792,81.20058559,205492.8458,climate trace,2025
+42741859,Action Ispat and Power Jharsuguda steel plant,21.83982172,83.9828023,592767.8243,climate trace,2025
+42741861,Gallantt Ispat Gorakhpur steel plant,26.75892462,83.20164,834617.0967,climate trace,2025
+48306442,Rungta Mines Karakhendra Steel Plant,22.140174,85.414616,418431.0686,climate trace,2025
+50980773,JSOL Angul steel plant,20.874713,84.944082,4930444.12,climate trace,2025
