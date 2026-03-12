@@ -1,0 +1,226 @@
+source_id,source_name,lat,lon,total_co2_emissions_2025,source,year
+1,AGARTALA GT,23.8712,91.3602,308193,Central Electricity Authority,Nov-25
+2,AKALTARA TPP,21.9603,82.4091,9434520,Central Electricity Authority,Nov-25
+3,AKRIMOTA LIG,23.7689,68.6447,146806,Central Electricity Authority,Nov-25
+7,AMAR KANTAK,23.1642,81.6373,1419294,Central Electricity Authority,Nov-25
+8,AMARAVATI TPP,21.0782,77.9009,8282887,Central Electricity Authority,Nov-25
+10,"ANAPARA ""C""",24.2007,82.8,7239567,Central Electricity Authority,Nov-25
+13,ANPARA,24.201,82.7891,15190953,Central Electricity Authority,Nov-25
+14,ANTA GT,25.1797,76.3188,232831,Central Electricity Authority,Nov-25
+15,ANUPPUR TPP,23.0655,81.7865,7805751,Central Electricity Authority,Nov-25
+16,AURAIYA GT,26.6282,79.5286,315069,Central Electricity Authority,Nov-25
+17,AVANTHA BHANDAR TPP,21.7438,83.2741,3848827,Central Electricity Authority,Nov-25
+24,BAKRESWAR,23.8285,87.4513,8154297,Central Electricity Authority,Nov-25
+26,BALCO TPP,22.3930944,82.7439443,3834683,Central Electricity Authority,Nov-25
+27,BANDAKHAR TPP,22.3421,82.4305,1884675,Central Electricity Authority,Nov-25
+28,BANDEL,22.9956,88.4042,2180381,Central Electricity Authority,Nov-25
+34,BARADARHA TPP,21.9114,83.1889,7705902,Central Electricity Authority,Nov-25
+35,BARAMURA,23.807,91.565,3096,Central Electricity Authority,Nov-25
+36,BARAUNI,25.3999,86.0218,3576934,Central Electricity Authority,Nov-25
+39,BARH STPP,25.4865,85.7452,15308659,Central Electricity Authority,Nov-25
+40,BARKHERA TPP,28.4723,79.8066,421217,Central Electricity Authority,Nov-25
+41,BARSINGAR LIGNITE,27.8453,73.2,1876287,Central Electricity Authority,Nov-25
+47,BELLARY TPS,15.1932,76.7195,8360412,Central Electricity Authority,Nov-25
+49,BHADRADRI  TPP,18.027488,80.735645,4781721,Central Electricity Authority,Nov-25
+54,BHAVNAGAR TPP,21.5837,72.2222,1999484,Central Electricity Authority,Nov-25
+58,BHILAI TPP,21.184,81.4237,3199936,Central Electricity Authority,Nov-25
+62,BHUSAWAL,21.0483,75.8425,7072439,Central Electricity Authority,Nov-25
+63,BINA TPP,23.3172,78.1336,2862519,Central Electricity Authority,Nov-25
+64,BINJKOTE,22.0103,83.2058,3616606,Central Electricity Authority,Nov-25
+68,BOKARO A ''EXP'',23.6783,86.0888,2843767,Central Electricity Authority,Nov-25
+71,BONGAIGAON TPP,26.5145,90.5287,4479559,Central Electricity Authority,Nov-25
+73,BUDGE BUDGE,22.4673,88.14,4727300,Central Electricity Authority,Nov-25
+76,CHAKABURA TPP,22.3932,82.5532,222422,Central Electricity Authority,Nov-25
+80,CHANDRAPUR_Coal,20.0063,79.29,14840233,Central Electricity Authority,Nov-25
+82,CHANDRAPURA,23.7376,86.1273,3133206,Central Electricity Authority,Nov-25
+86,CHHABRA TPS,24.6217,77.0357,14064260,Central Electricity Authority,Nov-25
+92,D.P.L.,23.5211,87.3023,3825238,Central Electricity Authority,Nov-25
+93,DADRI (NCTPP),28.603,77.6078,8886467,Central Electricity Authority,Nov-25
+94,DADRI GT,28.5932,77.6101,353184,Central Electricity Authority,Nov-25
+95,DAMODARAM SANJEEVAIAH,14.3444,80.1264,11955070,Central Electricity Authority,Nov-25
+96,DARLIPALLI STPP St-I,21.963554,83.89187,9908486,Central Electricity Authority,Nov-25
+98,DERANG,21.1238,84.9843,7991028,Central Electricity Authority,Nov-25
+99,DGEN MEGA CCCP,21.6923,72.6215,551064,Central Electricity Authority,Nov-25
+102,DHANU,19.9545,72.7478,2769399,Central Electricity Authority,Nov-25
+103,DHARIWAL INF TPP,20.0102,79.2033,4079740,Central Electricity Authority,Nov-25
+105,DHOLPUR,26.7024,77.8492,32716,Central Electricity Authority,Nov-25
+107,DHUVARAN CCPP,22.2396,72.752,166372,Central Electricity Authority,Nov-25
+109,DISHERGARH TPP,23.689366,86.854318,60805,Central Electricity Authority,Nov-25
+117,DURGAPUR STEEL TPS,23.58,87.2043,6356098,Central Electricity Authority,Nov-25
+120,EMCO GMR WARORA TPP,20.2723,78.9793,3892457,Central Electricity Authority,Nov-25
+123,F_BAD CCPP,28.3452,77.3615,93109,Central Electricity Authority,Nov-25
+125,FARAKKA STPS,24.772,87.894,12961891,Central Electricity Authority,Nov-25
+127,GADARWARA,22.8618,78.8648,7671284,Central Electricity Authority,Nov-25
+129,GAMA CCPP  Module - 1,29.1411,78.9632,112848,Central Electricity Authority,Nov-25
+130,GANDHAR GT,21.8242,73.1136,354812,Central Electricity Authority,Nov-25
+132,GANDHI NAGAR,25.2502,72.6765,2356228,Central Electricity Authority,Nov-25
+140,GHTP (LEH.MOH.),30.2666,75.1661,5141496,Central Electricity Authority,Nov-25
+146,GOINDWAL SAHIB TPP,31.3841,75.1464,2901240,Central Electricity Authority,Nov-25
+148,H_GANJ B,28.0179,78.1326,2405725,Central Electricity Authority,Nov-25
+149,H_GANJ B EXP-II,28.0175,78.13,2417186,Central Electricity Authority,Nov-25
+150,HALDIA,22.1042,88.1764,4085410,Central Electricity Authority,Nov-25
+154,HAZIRA-GSECL,21.1652,72.6613,100153,Central Electricity Authority,Nov-25
+157,I.B.VALLEY,21.6872,83.86,10804358,Central Electricity Authority,Nov-25
+158,I.P.GT,28.6194,77.2504,141754,Central Electricity Authority,Nov-25
+162,"IEPL ,BELA TPP",20.8102,79.0556,1766048,Central Electricity Authority,Nov-25
+163,"INDIA POWER TPP(HALDIA, HIRANMAYE )",22.0774,88.0995,1873345,Central Electricity Authority,Nov-25
+165,ITPCL TPP,11.5214,79.7515,5947310,Central Electricity Authority,Nov-25
+166,IND BARATH TPP (UTKAL),21.658,83.92,1990497,Central Electricity Authority,Nov-25
+167,INDRA GANDHI STPP,28.4849,76.3754,8056228,Central Electricity Authority,Nov-25
+170,JALLIPPA KAPURDI TPP,25.8888,71.3236,7328762,Central Electricity Authority,Nov-25
+171,JEGURUPADU GT,16.9312,81.86,15692,Central Electricity Authority,Nov-25
+173,JOJBERA,22.7554,86.2491,1624530,Central Electricity Authority,Nov-25
+175,JSW RATNAGIRI TPP,17.297,73.212,1638119,Central Electricity Authority,Nov-25
+177,K_GUDEM NEW,17.6219,80.6936,9551333,Central Electricity Authority,Nov-25
+178,K_KHEDA II,21.2818,79.116,8763225,Central Electricity Authority,Nov-25
+182,KAHALGAON,25.2349,87.2635,14907170,Central Electricity Authority,Nov-25
+184,KAKATIYA TPP,18.3835,79.8265,5717443,Central Electricity Authority,Nov-25
+189,KALISINDH,24.5295,76.0986,7123792,Central Electricity Authority,Nov-25
+191,KAMALANGA,20.87,85.2671,6983493,Central Electricity Authority,Nov-25
+194,KARAIKAL,10.9325,79.8216,118599,Central Electricity Authority,Nov-25
+199,KASAIPALLI,22.389,82.5549,1330453,Central Electricity Authority,Nov-25
+202,KASHIPUR CCPP,29.154721,78.974029,217174,Central Electricity Authority,Nov-25
+204,KATHALGURI GT,27.341,95.408,911361,Central Electricity Authority,Nov-25
+205,KAWAI TPP,24.7773,76.737,7760002,Central Electricity Authority,Nov-25
+206,KAWAS GT,21.175,72.6879,331531,Central Electricity Authority,Nov-25
+209,KHAMBERKHERA IPP,28.017,80.8307,426769,Central Electricity Authority,Nov-25
+212,KHARGONE STPP St-I,22.065169,75.851943,6107269,Central Electricity Authority,Nov-25
+219,KODERMA,24.3858,85.5517,6664107,Central Electricity Authority,Nov-25
+221,KOLAGHAT,22.4157,87.8713,5557321,Central Electricity Authority,Nov-25
+226,KORADI,21.2414,79.096,12278057,Central Electricity Authority,Nov-25
+227,KORBA STPS,22.3881,82.6858,18319602,Central Electricity Authority,Nov-25
+228,KORBA-EAST,22.3828,82.7188,3378155,Central Electricity Authority,Nov-25
+229,KORBA-WEST,22.4118,82.6888,8117724,Central Electricity Authority,Nov-25
+231,KOTA,25.1712,75.8171,8313546,Central Electricity Authority,Nov-25
+236,KUDGI,16.4994,75.8349,10099312,Central Electricity Authority,Nov-25
+240,KUNDARKI TPP,27.0786,82.0841,412043,Central Electricity Authority,Nov-25
+241,KUTCH LIG.,23.6626,68.7843,721648,Central Electricity Authority,Nov-25
+243,KUTTALAM GT,11.076,79.57,280416,Central Electricity Authority,Nov-25
+247,LAKWA GT,27.0221,94.8833,470617,Central Electricity Authority,Nov-25
+248,LARA,21.757,83.4573,10375606,Central Electricity Authority,Nov-25
+250,LALITPUR TPP,24.7971,78.6463,10661615,Central Electricity Authority,Nov-25
+266,MAHADEV PRASAD STPP,22.8395,86.0613,3504890,Central Electricity Authority,Nov-25
+267,MAHAN TPP,24.0077,82.4172,7688429,Central Electricity Authority,Nov-25
+268,MAHATMA GANDHI TPP,28.49,76.351,6495494,Central Electricity Authority,Nov-25
+272,MAITHON RB TPP,23.8209,86.76,6548849,Central Electricity Authority,Nov-25
+280,MAQSOODPUR  IPP,28.24440447,79.99754701,443408,Central Electricity Authority,Nov-25
+281,MARWA TPP,22.0708,82.6022,6451431,Central Electricity Authority,Nov-25
+283,MEJA STPP,25.1447,81.9415,7440514,Central Electricity Authority,Nov-25
+284,MEJIA,23.4639,87.1311,8285901,Central Electricity Authority,Nov-25
+285,MEJIA TPS EXT,23.4639,87.1311,6153512,Central Electricity Authority,Nov-25
+286,MELAMARUTHUR (MUTHIARA),8.9159,78.1374,5023674,Central Electricity Authority,Nov-25
+287,METTUR,11.7696,77.8138,4823207,Central Electricity Authority,Nov-25
+289,METTUR TPS EXT,11.7696,77.8138,2514795,Central Electricity Authority,Nov-25
+294,MONARCHAK CCPP,23.438,91.274,213214,Central Electricity Authority,Nov-25
+295,MOUDA STPS,21.1797,79.3978,12406115,Central Electricity Authority,Nov-25
+300,MUNDRA TPP,22.823,69.5532,24092699,Central Electricity Authority,Nov-25
+301,MUNDRA UMPP,22.8158,69.5281,17959106,Central Electricity Authority,Nov-25
+303,MUZAFFARPUR,26.1953,85.3017,2746698,Central Electricity Authority,Nov-25
+310,NABI NAGAR TPP (BRBCL),24.7065,84.0887,6112063,Central Electricity Authority,Nov-25
+311,NABI NAGAR STPP (NEW),24.7754,84.1588,11914272,Central Electricity Authority,Nov-25
+312,NAMRUP GT,27.1858,95.376,418412,Central Electricity Authority,Nov-25
+316,NASHIK,19.9817,73.8896,3205317,Central Electricity Authority,Nov-25
+319,NAWAPARA,21.92,83.2788,3597579,Central Electricity Authority,Nov-25
+323,NEYVELI FST EXT,11.5887,79.4611,3416096,Central Electricity Authority,Nov-25
+325,NEYVELI ST II,11.5576,79.4417,9130329,Central Electricity Authority,Nov-25
+326,NEYVELI NEW TPP,11.547055,79.44289,7608898,Central Electricity Authority,Nov-25
+327,NEYVELI TPS EXP -II,11.5534,79.4408,1259361,Central Electricity Authority,Nov-25
+328,NEYVELI TPS(Z),11.5401,79.4159,1962451,Central Electricity Authority,Nov-25
+329,NIGRIE,24.14997,81.904525,7701342,Central Electricity Authority,Nov-25
+332,NIWARI TPP,22.958166,78.732893,598598,Central Electricity Authority,Nov-25
+334,NORTH CHENNAI,13.245,80.3257,3105571,Central Electricity Authority,Nov-25
+335,NORTH CHENNAI EXTENSION,13.245,80.3257,5119622,Central Electricity Authority,Nov-25
+338,OBRA-A,24.4448,82.9803,5307249,Central Electricity Authority,Nov-25
+342,PAINAMPURAM,14.3512,80.1431,6753562,Central Electricity Authority,Nov-25
+344,PALATANA (TRIPURA CCPP),23.4987,91.4385,1509213,Central Electricity Authority,Nov-25
+348,PANIPAT,29.3975,76.8763,4140283,Central Electricity Authority,Nov-25
+352,PARAS,20.7147,76.7948,2813387,Central Electricity Authority,Nov-25
+355,PARICHA,25.5124,78.7588,5011107,Central Electricity Authority,Nov-25
+356,PARLI,18.8685,76.5254,3743194,Central Electricity Authority,Nov-25
+358,PATHADI TPS PH -I,22.2454,82.7246,3776372,Central Electricity Authority,Nov-25
+366,PIPAVAV CCCP,20.8986,71.4693,177493,Central Electricity Authority,Nov-25
+371,PRAGATI CCCP -III,28.7962,77.0706,1087534,Central Electricity Authority,Nov-25
+372,PRAGATI CCGT,28.6146,77.2528,310324,Central Electricity Authority,Nov-25
+374,PRYAGRAJ (BARA) TPP,25.196,81.6594,10912503,Central Electricity Authority,Nov-25
+381,R_GUNDEM - B,18.7695,79.4494,28496,Central Electricity Authority,Nov-25
+382,R_GUNDEM STPS,18.7572,79.456,13643171,Central Electricity Authority,Nov-25
+384,RAGHUNATHPUR TPP PH-I,23.622,86.661,5884218,Central Electricity Authority,Nov-25
+385,RAICHUR,16.3532,77.3422,8294950,Central Electricity Authority,Nov-25
+386,RAIGARH TPP,21.9846,83.2331,6300189,Central Electricity Authority,Nov-25
+387,RAIKHEDA,21.4499,81.8525,7883445,Central Electricity Authority,Nov-25
+390,RAJIV GANDHI  TPS HISAR,29.356,75.869,4958390,Central Electricity Authority,Nov-25
+391,RAJPURA TPP,30.557,76.577,8145771,Central Electricity Authority,Nov-25
+393,RAMGARH GT,27.336,70.538,219691,Central Electricity Authority,Nov-25
+399,RATIJA TPP,22.3404,82.493,652400,Central Electricity Authority,Nov-25
+400,RATNAGIRI GAS,17.5587,73.167,488001,Central Electricity Authority,Nov-25
+401,RAYAL SEEMA,14.704,78.4577,8997621,Central Electricity Authority,Nov-25
+404,RIHAND,24.027,82.7915,20877123,Central Electricity Authority,Nov-25
+408,ROKHIA GT,23.626,91.1948,139027,Central Electricity Authority,Nov-25
+410,ROPAR,31.0417,76.5847,4599910,Central Electricity Authority,Nov-25
+411,ROSA TPP PH - 1,27.818,79.936,6584634,Central Electricity Authority,Nov-25
+415,SAGARDIGHI TPP,24.3696,88.1046,11651264,Central Electricity Authority,Nov-25
+418,SALAYA TPP,22.3049,69.7101,4879927,Central Electricity Authority,Nov-25
+423,SANJAY GANDHI,23.3026,81.0668,8428819,Central Electricity Authority,Nov-25
+424,SANTALDIH,23.6013,86.4666,3684172,Central Electricity Authority,Nov-25
+426,SASAN UMPP,23.9784,82.6275,26935499,Central Electricity Authority,Nov-25
+427,SATPURA,22.11,78.173,3365095,Central Electricity Authority,Nov-25
+429,SEIONI TPP,22.7355,79.9123,2746667,Central Electricity Authority,Nov-25
+430,SEMBCORP GAYATRI,14.351,80.1443,7976506,Central Electricity Authority,Nov-25
+440,SHIRPUR,21.15103,74.854206,1294313,Central Electricity Authority,Nov-25
+444,Shri Singaji MALWA TPP,22.0971,76.5317,13883942,Central Electricity Authority,Nov-25
+445,SIKKA REP.,22.4208,69.8276,831284,Central Electricity Authority,Nov-25
+446,SIMHADRI,17.591,83.0917,11152035,Central Electricity Authority,Nov-25
+447,SIMHAPURI TPP,14.2133,80.0838,2998253,Central Electricity Authority,Nov-25
+448,SINGARENI TPP,18.8372,79.5748,6955301,Central Electricity Authority,Nov-25
+450,SINGRAULI STPS,24.1033,82.7068,14140251,Central Electricity Authority,Nov-25
+452,SIPAT STPS,22.13,82.293,19865158,Central Electricity Authority,Nov-25
+455,SOLAPUR STPP,31.7537,77.246,5884279,Central Electricity Authority,Nov-25
+459,SOUTHERN REPL.,22.5488,88.2926,474246,Central Electricity Authority,Nov-25
+464,STERLITE TPP,21.8144,84.0404,2265269,Central Electricity Authority,Nov-25
+466,SUGEN CCCP,21.3395,72.9889,1251571,Central Electricity Authority,Nov-25
+468,SURAT LIG.,21.397,73.106,3418559,Central Electricity Authority,Nov-25
+469,SURATGARH,29.179,74.0202,13136823,Central Electricity Authority,Nov-25
+472,SVPL,22.2915,82.5257,483498,Central Electricity Authority,Nov-25
+477,TALCHER STPS,21.0966,85.074,19123180,Central Electricity Authority,Nov-25
+478,TALWANDI SABO,29.924,75.2372,9276654,Central Electricity Authority,Nov-25
+479,TAMNAR TPP,22.0987,83.4513,16383683,Central Electricity Authority,Nov-25
+481,TANDA,26.586,82.602,9721603,Central Electricity Authority,Nov-25
+492,TENUGHAT,23.7573,85.8936,2197007,Central Electricity Authority,Nov-25
+493,THAMMINAPATNAM TPP,14.2133,80.0838,304949,Central Electricity Authority,Nov-25
+497,TIRORA TPP,21.4129,79.9671,18744810,Central Electricity Authority,Nov-25
+499,TORANGALLU EXT,15.1839,76.6622,2360661,Central Electricity Authority,Nov-25
+500,TORANGALLU IMP,15.1839,76.6622,1312155,Central Electricity Authority,Nov-25
+501,TORR POWER SAB.,23.0701,72.5933,2330654,Central Electricity Authority,Nov-25
+503,TROMBAY GT,19.0018,72.8967,601001,Central Electricity Authority,Nov-25
+504,TROMBAY_Coal,19.0004,72.8983,2765167,Central Electricity Authority,Nov-25
+507,TUTICORIN,8.7635,78.1753,5872752,Central Electricity Authority,Nov-25
+509,TUTICORIN JV,8.7603,78.1699,5056729,Central Electricity Authority,Nov-25
+510,TUTICORIN JV  Stage-IV,8.75531057,78.15803095,2614247,Central Electricity Authority,Nov-25
+513,UCHPINDA TPP,21.8858,83.1215,7325048,Central Electricity Authority,Nov-25
+514,UDUPI TPP,13.1596,74.8002,4502929,Central Electricity Authority,Nov-25
+517,UKAI_Coal,21.2093,73.5574,5288919,Central Electricity Authority,Nov-25
+521,UNCHAHAR,25.9131,81.3274,9551800,Central Electricity Authority,Nov-25
+522,UNO SUGEN,21.3411,72.9895,246248,Central Electricity Authority,Nov-25
+527,URAN GT,18.88,72.9715,1092409,Central Electricity Authority,Nov-25
+531,UTRAN CCCP EXT,21.2285,72.8705,127414,Central Electricity Authority,Nov-25
+533,UTRAULA TPP,27.3455,82.3166,406567,Central Electricity Authority,Nov-25
+537,VALLUR ntpc/ntecl,13.2371,80.3023,7898904,Central Electricity Authority,Nov-25
+538,VALUTHUR GT,9.3484,78.9235,439469,Central Electricity Authority,Nov-25
+542,VIJAYWADA,16.5984,80.537,13920220,Central Electricity Authority,Nov-25
+544,VINDH_CHAL STPS,24.0983,82.6719,32996108,Central Electricity Authority,Nov-25
+547,VIZAG TPP,17.5635,83.1382,3617447,Central Electricity Authority,Nov-25
+548,WANAKBORI,22.8725,73.3588,10601092,Central Electricity Authority,Nov-25
+549,WARDHA WARORA(Sai Wardha Power),20.2727,78.9792,3723115,Central Electricity Authority,Nov-25
+552,YAMUNANAGAR TPP,30.1081,77.3257,2926725,Central Electricity Authority,Nov-25
+554,YERMARUS TPP,16.2949,77.3568,5173693,Central Electricity Authority,Nov-25
+556,JAWAHARPUR STPP,27.497098,78.826071,1871426,Central Electricity Authority,Nov-25
+558,NORTH KARANPURA,23.850772,85.012411,8703416,Central Electricity Authority,Nov-25
+559,OBRA-C STPP,24.4445803,82.9803325,2287261,Central Electricity Authority,Nov-25
+560,SHREE CEMENT,26.073889,74.385,1273202,Central Electricity Authority,Nov-25
+564,TELANGANA STPP,18.75146,79.471916,8384675,Central Electricity Authority,Nov-25
+567,OPG POWER GENERATION PRIVATE,13.437422,80.09788,2427370,Central Electricity Authority,Nov-25
+569,YADADRI TPS,16.708219,79.581184,492634,Central Electricity Authority,Nov-25
+570,GHATAMPUR TPP,25.975,80.1889,884777,Central Electricity Authority,Nov-25
+571,KHURJA STPP,28.158333,77.908333,717110,Central Electricity Authority,Nov-25
+572,Maadurga Thermal Power Company Ltd.,20.57622,86.020728,272965,Central Electricity Authority,Nov-25
+573,YELHANKA CCPP,13.117556,77.581875,117086,Central Electricity Authority,Nov-25
