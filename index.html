@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>India CO₂ Emissions Map</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+:root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,0.90);
+  --card-border: rgba(255,255,255,0.35);
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, 0.65);
+  --shadow: 0 16px 40px rgba(2, 6, 23, 0.22);
+  --shadow-soft: 0 10px 24px rgba(2, 6, 23, 0.16);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --pad: 14px;
+  --gap: 10px;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+#map{
+  height:100vh;
+  width:100vw;
+}
+
+/* ===== Leaflet controls: modern card style ===== */
+.leaflet-control{
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.18));
+}
+
+.legend{
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  padding: 12px 12px;
+  border-radius: var(--radius-sm);
+  line-height: 1.45;
+  box-shadow: var(--shadow-soft);
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.legend strong{
+  display:block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.legend span{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius: 999px;
+  margin-right:8px;
+  transform: translateY(1px);
+}
+
+/* Layer control */
+.leaflet-control-layers{
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.leaflet-control-layers-expanded{
+  padding: 10px 12px;
+}
+
+.leaflet-control-layers-separator{
+  border-top: 1px solid rgba(15,23,42,0.10);
+  margin: 8px 0;
+}
+
+.leaflet-control-layers label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+.leaflet-control-layers label:hover{
+  background: rgba(2,6,23,0.06);
+}
+
+.leaflet-control-layers input{
+  accent-color: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Zoom buttons */
+.leaflet-bar{
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow:hidden;
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.leaflet-bar a{
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  color: rgba(15,23,42,0.85);
+  font-weight: 700;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.leaflet-bar a:hover{
+  background: rgba(37,99,235,0.10);
+  color: #1d4ed8;
+}
+
+/* Tooltip/Popup polish */
+.leaflet-tooltip{
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: var(--shadow-soft);
+  padding: 8px 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.leaflet-popup-content-wrapper{
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.96);
+}
+.leaflet-popup-content{
+  margin: 12px 14px;
+  font-size: 13px;
+}
+.leaflet-popup-tip{
+  background: rgba(255,255,255,0.96);
+}
+
+/* ===== statistics panel ===== */
+#statsBox{
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  width: 360px;
+  max-width: calc(100vw - 40px);
+
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  padding: var(--pad);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index:1000;
+  font-size: 13px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#statsBox strong{
+  display:block;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+#minEmission, #maxEmission{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 10px;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(2, 6, 23, 0.05);
+  border: 1px solid rgba(2, 6, 23, 0.06);
+  margin-bottom: 8px;
+  color: rgba(15, 23, 42, 0.86);
+}
+
+#emissionChart{
+  margin-top: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(2, 6, 23, 0.06);
+  padding: 10px;
+}
+
+/* Subtle “app” feel */
+.leaflet-container{
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 520px){
+  #statsBox{
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+  }
+}
+
+/* Dark mode support (keeps map imagery; only UI changes) */
+@media (prefers-color-scheme: dark){
+  :root{
+    --card: rgba(15,23,42,0.70);
+    --card-border: rgba(148,163,184,0.20);
+    --text: rgba(255,255,255,0.92);
+    --muted: rgba(255,255,255,0.65);
+    --shadow: 0 18px 48px rgba(0,0,0,0.45);
+    --shadow-soft: 0 10px 26px rgba(0,0,0,0.35);
+  }
+
+  .legend,
+  .leaflet-control-layers,
+  .leaflet-bar,
+  #statsBox{
+    color: var(--text);
+  }
+
+  #minEmission, #maxEmission{
+    background: rgba(148,163,184,0.12);
+    border: 1px solid rgba(148,163,184,0.18);
+    color: rgba(255,255,255,0.88);
+  }
+
+  .leaflet-control-layers label:hover{
+    background: rgba(148,163,184,0.10);
+  }
+
+  .leaflet-bar a{
+    color: rgba(255,255,255,0.88);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<div id="statsBox">
+  <strong>Emission Statistics</strong>
+  <div id="minEmission"></div>
+  <div id="maxEmission"></div>
+  <canvas id="emissionChart"></canvas>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+/* ================= MAP ================= */
+
+const map = L.map("map").setView([22.5, 79], 5);
+
+L.tileLayer(
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  { attribution: "Tiles © Esri" }
+).addTo(map);
+
+
+/* ================= SECTORS ================= */
+
+const sectors = {
+  Power:       { file: "data/co2_emissions_2024_summary_power.csv",       color: "#00bcd4" },
+  Cement:      { file: "data/co2_emissions_2024_summary_cement.csv",      color: "#ff9800" },
+  Steel:       { file: "data/co2_emissions_2024_summary_steel.csv",       color: "#9c27b0" },
+  Refinery:    { file: "data/co2_emissions_2024_summary_refinery.csv",    color: "#4caf50" },
+  Fertilisers: { file: "data/co2_emissions_2024_summary_fertilisers.csv", color: "#f44336" }
+};
+
+const layers = {};
+const sectorTotals = {};
+const sectorCounts = {};
+const sectorEmissions = {};
+
+const MIN_RADIUS = 3;
+const MAX_RADIUS = 30;
+
+
+/* ================= HELPERS ================= */
+
+function getEmissionField(row) {
+  if (row.total_co2_emissions_2025 != null && row.total_co2_emissions_2025 !== "") {
+    return Number(row.total_co2_emissions_2025);
+  }
+  if (row.total_co2_emissions_2024 != null && row.total_co2_emissions_2024 !== "") {
+    return Number(row.total_co2_emissions_2024);
+  }
+  if (row.total_co2 != null && row.total_co2 !== "") {
+    return Number(row.total_co2);
+  }
+  return null;
+}
+
+function getDisplayYear(row) {
+  return row.year ?? "N/A";
+}
+
+function getDisplaySource(row) {
+  return row.source ?? "N/A";
+}
+
+
+/* ================= LOAD CSV ================= */
+
+function loadSector(sectorName, config) {
+  const layer = L.layerGroup();
+  layers[sectorName] = layer;
+
+  let sectorSum = 0;
+  let plantCount = 0;
+  let maxEmission = 0;
+
+  sectorEmissions[sectorName] = [];
+
+  Papa.parse(config.file, {
+    download: true,
+    header: true,
+    dynamicTyping: true,
+
+    complete: function(results) {
+      const validPlants = results.data.filter(row => {
+        const e = getEmissionField(row);
+        return row.lat && row.lon && e && e > 0;
+      });
+
+      /* find max */
+      validPlants.forEach(row => {
+        const e = getEmissionField(row);
+        if (e > maxEmission) {
+          maxEmission = e;
+        }
+      });
+
+      /* create markers */
+      validPlants.forEach(row => {
+        const emissions = getEmissionField(row);
+        const year = getDisplayYear(row);
+        const source = getDisplaySource(row);
+
+        sectorSum += emissions;
+        plantCount++;
+
+        sectorEmissions[sectorName].push(emissions);
+
+        const radius =
+          MIN_RADIUS +
+          Math.sqrt(emissions / maxEmission) * (MAX_RADIUS - MIN_RADIUS);
+
+        const marker = L.circleMarker(
+          [row.lat, row.lon],
+          {
+            radius: radius,
+            color: config.color,
+            fillColor: config.color,
+            fillOpacity: 0.7,
+            weight: 0
+          }
+        )
+        .bindTooltip(
+          `<strong>${row.source_name}</strong><br>
+           CO₂ (${year}): ${(emissions / 1e6).toFixed(2)} Mt`,
+          { direction: "top", offset: [0, -6], sticky: true }
+        )
+        .bindPopup(
+          `<strong>${row.source_name}</strong><br>
+           Sector: ${sectorName}<br>
+           Source: ${source}<br>
+           Year: ${year}<br>
+           CO₂ estimate: ${emissions.toLocaleString()} t`
+        );
+
+        marker.on("mouseover", function() {
+          this.setStyle({ weight: 2, fillOpacity: 0.9 });
+        });
+
+        marker.on("mouseout", function() {
+          this.setStyle({ weight: 0, fillOpacity: 0.7 });
+        });
+
+        marker.addTo(layer);
+      });
+
+      sectorTotals[sectorName] = sectorSum;
+      sectorCounts[sectorName] = plantCount;
+
+      layer.addTo(map);
+
+      updateTotalCO2();
+      updatePlantCount();
+      updateEmissionStats();
+    }
+  });
+}
+
+
+/* load all sectors */
+Object.entries(sectors).forEach(([name, cfg]) => {
+  loadSector(name, cfg);
+});
+
+
+/* ================= LAYER CONTROL ================= */
+
+const overlays = {};
+
+Object.entries(sectors).forEach(([name, cfg]) => {
+  overlays[`<span style="color:${cfg.color}">⬤</span> ${name}`] = layers[name];
+});
+
+L.control.layers(null, overlays, { collapsed: false }).addTo(map);
+
+
+/* ================= TOTAL CO2 ================= */
+
+const totalCO2Control = L.control({ position: "bottomleft" });
+
+totalCO2Control.onAdd = function() {
+  this._div = L.DomUtil.create("div", "legend");
+  this.update(0);
+  return this._div;
+};
+
+totalCO2Control.update = function(totalTonnes) {
+  const mt = totalTonnes / 1e6;
+  this._div.innerHTML =
+    `<strong>Total CO₂</strong><br>
+     ${mt.toLocaleString(undefined, { maximumFractionDigits: 2 })} Mt`;
+};
+
+totalCO2Control.addTo(map);
+
+function updateTotalCO2() {
+  let total = 0;
+
+  Object.keys(layers).forEach(sector => {
+    if (map.hasLayer(layers[sector])) {
+      total += sectorTotals[sector] || 0;
+    }
+  });
+
+  totalCO2Control.update(total);
+}
+
+
+/* ================= PLANT COUNT ================= */
+
+const plantCountControl = L.control({ position: "topright" });
+
+plantCountControl.onAdd = function() {
+  this._div = L.DomUtil.create("div", "legend");
+  this.update(0);
+  return this._div;
+};
+
+plantCountControl.update = function(count) {
+  this._div.innerHTML =
+    `<strong>Total Plants</strong><br>
+     ${count.toLocaleString()}`;
+};
+
+plantCountControl.addTo(map);
+
+function updatePlantCount() {
+  let count = 0;
+
+  Object.keys(layers).forEach(sector => {
+    if (map.hasLayer(layers[sector])) {
+      count += sectorCounts[sector] || 0;
+    }
+  });
+
+  plantCountControl.update(count);
+}
+
+
+/* ================= EMISSION STATS ================= */
+
+let emissionChart;
+
+function updateEmissionStats() {
+  let emissions = [];
+
+  Object.keys(layers).forEach(sector => {
+    if (map.hasLayer(layers[sector])) {
+      emissions = emissions.concat(sectorEmissions[sector] || []);
+    }
+  });
+
+  if (emissions.length === 0) return;
+
+  const min = Math.min(...emissions);
+  const max = Math.max(...emissions);
+
+  document.getElementById("minEmission").innerHTML =
+    "Min: " + min.toLocaleString() + " t";
+
+  document.getElementById("maxEmission").innerHTML =
+    "Max: " + (max / 1e6).toFixed(3) + " Mt";
+
+  const bins = 10;
+  const step = (max - min) / bins || 1;
+
+  const histogram = new Array(bins).fill(0);
+  const labels = [];
+
+  for (let i = 0; i < bins; i++) {
+    const start = min + i * step;
+    const end = start + step;
+
+    labels.push((start / 1e6).toFixed(2));
+
+    emissions.forEach(e => {
+      if (
+        (e >= start && e < end) ||
+        (i === bins - 1 && e === max)
+      ) {
+        histogram[i]++;
+      }
+    });
+  }
+
+  const ctx = document.getElementById("emissionChart");
+
+  if (emissionChart) {
+    emissionChart.destroy();
+  }
+
+  emissionChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [{
+        data: histogram,
+        backgroundColor: "#2196f3",
+        borderRadius: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: {
+          title: { display: true, text: "Emission bins (Mt CO₂)" },
+          grid: { display: false }
+        },
+        y: {
+          title: { display: true, text: "Number of plants" },
+          grid: { color: "rgba(15,23,42,0.10)" }
+        }
+      }
+    }
+  });
+}
+
+
+/* ================= EVENTS ================= */
+
+map.on("overlayadd overlayremove", function() {
+  updateTotalCO2();
+  updatePlantCount();
+  updateEmissionStats();
+});
+</script>
+
+</body>
+</html>
